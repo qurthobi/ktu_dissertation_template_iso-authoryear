@@ -1,0 +1,102 @@
+\documentclass[twoside, 11pt]{article}
+\usepackage{ktu_dissertation_style}
+\addbibresource{references.bib}
+\AtBeginBibliography{\fontsize{10pt}{12pt}\selectfont}
+
+\newglossary[slg]{symbolslist}{syi}{syg}{List of Symbols}
+
+\setglossarystyle{list}
+\renewcommand{\glsgroupskip}{}
+
+\renewcommand*{\glossentry}[2]{%
+  \item[\glsentryitem{#1}\glstarget{#1}{\glossentryname{#1}}] -- \glossentrydesc{#1}.%
+}
+\makeglossaries
+\begin{document}
+\selectlanguage{english}
+\input{Glossaries}
+\clearpage
+\input{TitlePageEN}
+\clearpage
+\input{TitlePageLT}
+\clearpage
+ %to include title page in page numbering counter
+\setcounter{page}{5}
+\renewcommand{\contentsname}{\textbf{\MakeUppercase{Table of Contents}}}
+\tableofcontents
+\clearpage
+\addcontentsline{toc}{section}{\listtablename}
+\listoftablesnospace
+\clearpage
+\clearpage
+\addcontentsline{toc}{section}{\listfigurename}
+\listoffiguresnospace
+\section*{\textbf{\MakeUppercase{List of Abbreviations and Terms}}}
+\addcontentsline{toc}{section}{\MakeUppercase{List of Abbreviations and Terms}}
+
+\vspace{1em}
+\noindent\textbf{Abbreviations:}\vspace{-1.5em}
+
+\begingroup
+\GlossSemicolon
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\printglossary[type=\acronymtype, title={}]
+\endgroup
+
+\vspace{1.5em}
+\noindent\textbf{Terms:}\vspace{-1.5em}
+
+\begingroup
+\GlossPeriod
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\printglossary[type=main, title={}]
+\endgroup
+
+%% Uncomment this section to print the list of symbols, and remember to update the heading. 
+% \vspace{2em}
+% \noindent\textbf{Symbols:}\vspace{-2em}
+
+% \begingroup
+% \GlossSemicolon
+% \let\clearpage\relax
+% \let\cleardoublepage\relax
+% \printglossary[type=symbolslist, title={}]
+% \endgroup
+\clearpage
+\input{chapters/intro.tex}
+\clearpage
+\input{chapters/chapter1.tex}
+\clearpage
+\input{chapters/chapter2.tex}
+\clearpage
+\input{chapters/chapter3.tex}
+\clearpage
+\input{chapters/conclusions.tex}
+\clearpage
+\selectlanguage{lithuanian}
+\input{summaryLT/intro_skyrius.tex}
+\nopagebreak
+\input{summaryLT/1_skyrius.tex}
+\nopagebreak
+\input{summaryLT/2_skyrius.tex}
+\nopagebreak
+\input{summaryLT/3_skyrius.tex}
+\nopagebreak
+\input{summaryLT/isvados.tex}
+\clearpage
+\phantomsection 
+\selectlanguage{english}
+\addcontentsline{toc}{section}{\MakeUppercase{List of References}}
+\printbibliography[title={\MakeUppercase{List of References}}]
+\clearpage 
+\selectlanguage{english}
+\input{CuricullumVitae}
+\clearpage
+\input{ListOfPublications}
+\clearpage
+\input{Acknowledgement}
+\clearpage %<-- Please insert the comment marker if the total count of your pages, excluding the metrics section, is an odd number.
+\input{Metrics}
+\end{document}
