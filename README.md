@@ -22,7 +22,7 @@ The template is designed to simplify academic writing while maintaining a profes
 ## Bibliography Support
 
 - `biblatex` integration
-- ISO 690:2021-style numeric citations
+- ISO 690:2021-style name-year citations
 - Biber backend support
 - Easy reference management
 
