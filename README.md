@@ -48,7 +48,7 @@ The template is designed to simplify academic writing while maintaining a profes
 .
 ├── main.tex                    # Main dissertation file
 ├── bibliography.bib            # Bibliography database
-├── ktu_dissertation_style.sty        # Main KTU style package
+├── ktu_dissertation_style.sty  # Main KTU style package
 ├── summaryLT/                  # Lithuanian summary section
 ├── chapters/                   # Dissertation chapters
 └── README.md
@@ -130,7 +130,8 @@ bibliography.bib
 Example citation:
 
 ```latex
-\cite{example2025}
+\citet{example2025} <------ Textual citation
+\citep{example2025} <------ Parenthetical citation
 ```
 
 The template uses:
