@@ -48,7 +48,7 @@ The template is designed to simplify academic writing while maintaining a profes
 .
 ├── main.tex                    # Main dissertation file
 ├── bibliography.bib            # Bibliography database
-├── ktu_thesis_style.sty        # Main KTU style package
+├── ktu_dissertation_style.sty        # Main KTU style package
 ├── summaryLT/                  # Lithuanian summary section
 ├── chapters/                   # Dissertation chapters
 └── README.md
